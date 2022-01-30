@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar class="header">
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+      <ion-button>
+        <ion-icon slot="icon-only secondary" name="globe"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>GPS Localisation</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="body">
+
+<ion-grid>
+  <ion-row>
+    <ion-col  size="12">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle></ion-card-subtitle>
+          <ion-card-title >Localisation Courante</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </ion-col>
+        
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle><ion-icon  color="warning" name="swap-horizontal"></ion-icon></ion-card-subtitle>
+          <ion-card-title>Latitude  <ion-spinner color="warning" name="circles"></ion-spinner></ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          {{latitude}}
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle><ion-icon color="success" name="swap-vertical"></ion-icon></ion-card-subtitle>
+          <ion-card-title >Longitude  <ion-spinner  color="success" name="circles" class="ion-padding-left"></ion-spinner></ion-card-title>
+          <!-- Dots -->
+        
+        </ion-card-header>
+      
+        <ion-card-content>
+          {{longitude}}
+          
+        </ion-card-content>
+       
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+  
+  
+  
+</ion-content>

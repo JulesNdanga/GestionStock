@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar class="header">
+    <ion-title>Creer un nouveau Produit</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="body">
+  <form #f="ngForm" (ngSubmit)="createProduct(f.value)">
+    <ion-item>
+      <ion-input name="name" type="text" ngModel placeholder="Nom du Produit"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input name="reference" type="text" ngModel placeholder="La Reference"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label> Quantité : </ion-label>
+      <ion-input name="qte" type="number" ngModel required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input name="description" type="text" ngModel placeholder="Description du Produit"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input name="pu" type="number" ngModel placeholder="Prix du Produit"></ion-input>
+    </ion-item>
+      <ion-button expand="full" type="submit"> Creer le Produit</ion-button>
+  </form>
+</ion-content>
